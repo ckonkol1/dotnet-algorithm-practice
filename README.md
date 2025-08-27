@@ -1,2 +1,3 @@
 # dotnet-algorithm-practice
-Algorithm Practice Quesitons for Interviews
+
+Algorithm Practice for Interviews
