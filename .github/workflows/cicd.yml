@@ -10,7 +10,7 @@ on:
 
 env:
   DOTNET_VERSION: '9.0.x'
-  SOLUTION_PATH: './algoexpert.sln'
+  SOLUTION_PATH: './dotnet-algorithm-practice.sln'
 
 jobs:
   test:
