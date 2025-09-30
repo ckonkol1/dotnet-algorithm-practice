@@ -27,6 +27,7 @@ public static class FirstNonRepeatingChar
         return -1;
     }
 
+    //Space and Time Complexity: O(n) time | O(1) space
     public static int FirstNonRepeatingCharacter(string str)
     {
         var dict = new Dictionary<char, int>();

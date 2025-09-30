@@ -1,7 +1,7 @@
 ﻿using BinaryTrees.Easy;
 using BinaryTrees.Models;
 
-namespace BinarySumsUnitTests.Easy
+namespace BinaryTreeUnitTests.Easy
 {
     public class BranchSumsUnitTests
     {
