@@ -14,10 +14,12 @@
    Note: you can assume that each class has at least 2 students.
 
     Sample Input:
-   "blueShirtHeights": [6, 9, 2, 4, 5],
-   "redShirtHeights": [5, 8, 1, 3, 4]
+        "blueShirtHeights": [6, 9, 2, 4, 5],
+        "redShirtHeights": [5, 8, 1, 3, 4]
 
     Sample Output: true
+
+    Space and Time Complexity: O(n log n) time | O(1) space
  */
 public static class ClassPhoto
 {

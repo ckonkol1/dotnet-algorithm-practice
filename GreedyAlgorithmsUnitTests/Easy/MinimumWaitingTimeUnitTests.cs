@@ -6,7 +6,7 @@ public class MinimumWaitingTimeUnitTests
 {
     [Theory]
     [MemberData(nameof(GetMinimumWaitingTimeData))]
-    public void TestGetMinimumWaitingTimeData(int[] array, int expectedResult)
+    public void TestGetMinimumWaitingTime(int[] array, int expectedResult)
     {
         var result = MinimumWaitingTime.GetMinimumWaitingTime(array);
         Assert.Equivalent(expectedResult, result);
