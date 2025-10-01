@@ -2,19 +2,19 @@
 
 public class BST
 {
-    public int value;
-    public BST left;
-    public BST right;
+    public int Value;
+    public BST Left = null!;
+    public BST Right = null!;
 
     public BST(int value)
     {
-        this.value = value;
+        this.Value = value;
     }
 
     public BST(int value, BST left, BST right)
     {
-        this.value = value;
-        this.left = left;
-        this.right = right;
+        this.Value = value;
+        this.Left = left;
+        this.Right = right;
     }
 }

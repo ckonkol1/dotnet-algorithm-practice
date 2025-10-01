@@ -1,7 +1,7 @@
 ﻿using BinaryTrees.Easy;
 using BinaryTrees.Models;
 
-namespace BinarySumsUnitTests.Easy;
+namespace BinaryTreeUnitTests.Easy;
 
 public class EvaluateExpressionTreeUnitTests
 {
@@ -13,54 +13,16 @@ public class EvaluateExpressionTreeUnitTests
         Assert.Equivalent(expectedResult, result);
     }
 
-    public static IEnumerable<object[]> GetEvaluateExpressionTreeData
-    {
-        get
+    public static TheoryData<BinaryTree, int> GetEvaluateExpressionTreeData =>
+        new()
         {
-            var data = new List<object[]>
-            {
-                new object[]
-                {
-                    new BinaryTree(-1, new BinaryTree(2, null, null), new BinaryTree(3, null, null)),
-                    5
-                },
-                new object[]
-                {
-                    new BinaryTree(-2, new BinaryTree(2, null, null), new BinaryTree(3, null, null)),
-                    -1
-                },
-                new object[]
-                {
-                    new BinaryTree(-2, new BinaryTree(3, null, null), new BinaryTree(2, null, null)),
-                    1
-                },
-                new object[]
-                {
-                    new BinaryTree(-3, new BinaryTree(2, null, null), new BinaryTree(3, null, null)),
-                    0
-                },
-                new object[]
-                {
-                    new BinaryTree(-3, new BinaryTree(3, null, null), new BinaryTree(2, null, null)),
-                    1
-                },
-                new object[]
-                {
-                    new BinaryTree(-4, new BinaryTree(2, null, null), new BinaryTree(3, null, null)),
-                    6
-                },
-                new object[]
-                {
-                    new BinaryTree(-1, new BinaryTree(2, null, null), new BinaryTree(-2, new BinaryTree(4, null, null), new BinaryTree(5, null, null))),
-                    1
-                },
-                new object[]
-                {
-                    new BinaryTree(-3, new BinaryTree(10, null, null), new BinaryTree(-2, new BinaryTree(4, null, null), new BinaryTree(6, null, null))),
-                    -5
-                },
-            };
-            return data;
-        }
-    }
+            { new BinaryTree(-1, new BinaryTree(2, null!, null!), new BinaryTree(3, null!, null!)), 5 },
+            { new BinaryTree(-2, new BinaryTree(2, null!, null!), new BinaryTree(3, null!, null!)), -1 },
+            { new BinaryTree(-2, new BinaryTree(3, null!, null!), new BinaryTree(2, null!, null!)), 1 },
+            { new BinaryTree(-3, new BinaryTree(2, null!, null!), new BinaryTree(3, null!, null!)), 0 },
+            { new BinaryTree(-3, new BinaryTree(3, null!, null!), new BinaryTree(2, null!, null!)), 1 },
+            { new BinaryTree(-4, new BinaryTree(2, null!, null!), new BinaryTree(3, null!, null!)), 6 },
+            { new BinaryTree(-1, new BinaryTree(2, null!, null!), new BinaryTree(-2, new BinaryTree(4, null!, null!), new BinaryTree(5, null!, null!))), 1 },
+            { new BinaryTree(-3, new BinaryTree(10, null!, null!), new BinaryTree(-2, new BinaryTree(4, null!, null!), new BinaryTree(6, null!, null!))), -5 },
+        };
 }
