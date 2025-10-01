@@ -22,12 +22,12 @@ public static class RemoveDuplicates
         while (currentNode != null)
         {
             var nextNode = currentNode.Next;
-            while (nextNode != null && nextNode.Value == currentNode.Value)
+            while (nextNode != null! && nextNode.Value == currentNode.Value)
             {
                 nextNode = nextNode.Next;
             }
 
-            currentNode.Next = nextNode;
+            currentNode.Next = nextNode!;
             currentNode = nextNode;
         }
 

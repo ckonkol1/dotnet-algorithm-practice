@@ -6,12 +6,12 @@ public static class ClosestValue
 {
     /*
      * Find Closest Value In BST
-       Write a function that takes in a Binary Search Tree (BST) and a target integer value and returns the closest value to that target value
+       Write a function that takes in a Binary Search Tree (BST) and a target integer Value and returns the closest Value to that target Value
        contained in the BST.
-       You can assume that there will only be one closest value.
-       Each BST node has an integer value , a left child node, anda right child node. A node is said to be a valid BST node if and
-       only if it satisfies the BST property: its value is strictly greater than the values of every node to its left; its value is less than or equal
-       to the values of every node to its right; and its children nodes are either valid BST nodes themselves or None / null
+       You can assume that there will only be one closest Value.
+       Each BST node has an integer Value , a Left child node, anda Right child node. A node is said to be a valid BST node if and
+       only if it satisfies the BST property: its Value is strictly greater than the values of every node to its Left; its Value is less than or equal
+       to the values of every node to its Right; and its children nodes are either valid BST nodes themselves or None / null
 
         Sample Input: tree =    10
                               /   \
@@ -29,24 +29,24 @@ public static class ClosestValue
 
         while (tree != null)
         {
-            var diff = Math.Abs(tree.value - target);
+            var diff = Math.Abs(tree.Value - target);
             if (diff < Math.Abs(closestValue - target))
             {
-                closestValue = tree.value;
+                closestValue = tree.Value;
             }
 
-            if (tree.value == target)
+            if (tree.Value == target)
             {
-                closestValue = tree.value;
+                closestValue = tree.Value;
                 break;
             }
-            else if (tree.value < target)
+            else if (tree.Value < target)
             {
-                tree = tree.right;
+                tree = tree.Right;
             }
             else
             {
-                tree = tree.left;
+                tree = tree.Left;
             }
         }
 

@@ -20,47 +20,38 @@ public class MiddleNodeUnitTests
         Assert.Equivalent(expectedResult, result);
     }
 
-    public static IEnumerable<object[]> GetMiddleNodeData
-    {
-        get
+    public static TheoryData<LinkedList.LinkedList, LinkedList.LinkedList> GetMiddleNodeData =>
+        new()
         {
-            var data = new List<object[]>
             {
-                new object[]
-                {
+                new LinkedList.LinkedList(1,
                     new LinkedList.LinkedList(1,
                         new LinkedList.LinkedList(1,
-                            new LinkedList.LinkedList(1,
-                                new LinkedList.LinkedList(3,
+                            new LinkedList.LinkedList(3,
+                                new LinkedList.LinkedList(4,
                                     new LinkedList.LinkedList(4,
                                         new LinkedList.LinkedList(4,
                                             new LinkedList.LinkedList(4,
-                                                new LinkedList.LinkedList(4,
-                                                    new LinkedList.LinkedList(5,
-                                                        new LinkedList.LinkedList(6,
-                                                            new LinkedList.LinkedList(6, null))))))))))),
+                                                new LinkedList.LinkedList(5,
+                                                    new LinkedList.LinkedList(6,
+                                                        new LinkedList.LinkedList(6, null!))))))))))),
+                new LinkedList.LinkedList(4,
                     new LinkedList.LinkedList(4,
                         new LinkedList.LinkedList(4,
-                            new LinkedList.LinkedList(4,
-                                new LinkedList.LinkedList(5,
-                                    new LinkedList.LinkedList(6,
-                                        new LinkedList.LinkedList(6, null)))))),
-                },
-                new object[]
-                {
-                    new LinkedList.LinkedList(1,
-                        new LinkedList.LinkedList(2,
-                            new LinkedList.LinkedList(3, null))),
+                            new LinkedList.LinkedList(5,
+                                new LinkedList.LinkedList(6,
+                                    new LinkedList.LinkedList(6, null!))))))
+            },
+            {
+                new LinkedList.LinkedList(1,
                     new LinkedList.LinkedList(2,
-                        new LinkedList.LinkedList(3, null)),
-                },
-                new object[]
-                {
-                    new LinkedList.LinkedList(1, null),
-                    new LinkedList.LinkedList(1, null),
-                }
-            };
-            return data;
-        }
-    }
+                        new LinkedList.LinkedList(3, null!))),
+                new LinkedList.LinkedList(2,
+                    new LinkedList.LinkedList(3, null!))
+            },
+            {
+                new LinkedList.LinkedList(1, null!),
+                new LinkedList.LinkedList(1, null!)
+            }
+        };
 }
