@@ -30,12 +30,12 @@ namespace LinkedListUnitTests.Easy
                                                     new LinkedList.LinkedList(4,
                                                         new LinkedList.LinkedList(5,
                                                             new LinkedList.LinkedList(6,
-                                                                new LinkedList.LinkedList(6, null))))))))))),
+                                                                new LinkedList.LinkedList(6, null!))))))))))),
                         new LinkedList.LinkedList(1,
                             new LinkedList.LinkedList(3,
                                 new LinkedList.LinkedList(4,
                                     new LinkedList.LinkedList(5,
-                                        new LinkedList.LinkedList(6, null))))),
+                                        new LinkedList.LinkedList(6, null!))))),
                     },
                     new object[]
                     {
@@ -45,13 +45,13 @@ namespace LinkedListUnitTests.Easy
                                     new LinkedList.LinkedList(1,
                                         new LinkedList.LinkedList(1,
                                             new LinkedList.LinkedList(1,
-                                                new LinkedList.LinkedList(1, null))))))),
-                        new LinkedList.LinkedList(1, null),
+                                                new LinkedList.LinkedList(1, null!))))))),
+                        new LinkedList.LinkedList(1, null!),
                     },
                     new object[]
                     {
-                        new LinkedList.LinkedList(1, null),
-                        new LinkedList.LinkedList(1, null),
+                        new LinkedList.LinkedList(1, null!),
+                        new LinkedList.LinkedList(1, null!),
                     }
                 };
                 return data;
