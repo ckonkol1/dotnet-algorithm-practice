@@ -6,7 +6,7 @@ namespace LinkedListUnitTests.Easy
     {
         [Theory]
         [MemberData(nameof(GetRemoveDuplicatesData))]
-        public void TestGetBranchSums(LinkedList.LinkedList input, LinkedList.LinkedList expectedResult)
+        public void TestRemoveDuplicates(LinkedList.LinkedList input, LinkedList.LinkedList expectedResult)
         {
             var result = RemoveDuplicates.RemoveDuplicatesFromLinkedList(input);
             Assert.Equivalent(expectedResult, result);
