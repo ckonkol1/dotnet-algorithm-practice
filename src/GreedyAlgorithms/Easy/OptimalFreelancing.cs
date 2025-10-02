@@ -37,14 +37,14 @@ public static class OptimalFreelancing
 {
     public static int GetOptimalFreelancing(Dictionary<string, int>[] jobs)
     {
-        var MAX_DAYS = 7;
+        var maxDays = 7;
         Array.Sort(jobs, (a, b) => a["payment"].CompareTo(b["payment"]));
 
-        var payments = new int[MAX_DAYS];
+        var payments = new int[maxDays];
 
         for (var i = jobs.Length - 1; i >= 0; i--)
         {
-            var index = Math.Min(jobs[i]["deadline"], MAX_DAYS);
+            var index = Math.Min(jobs[i]["deadline"], maxDays);
 
             for (var j = index - 1; j >= 0; j--)
             {
