@@ -1,4 +1,6 @@
-﻿namespace RecursionUnitTests.Easy
+﻿using Recursion.Easy;
+
+namespace RecursionUnitTests.Easy
 {
     public class ProductSumUnitTests
     {

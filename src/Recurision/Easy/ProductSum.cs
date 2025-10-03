@@ -14,6 +14,8 @@
     O(n) time | O(d) space - where n is the total number of elements in the array, including sub-elements, and d is the greatest depth of "special"
  */
 
+namespace Recursion.Easy;
+
 public static class ProductSum
 {
     public static int GetProductSum(List<object> array)
