@@ -1,0 +1,43 @@
+﻿/*
+ *Product Sum
+   Write a function that takes in a "special" array and returns its product sum.
+   A "special" array is a non-empty array that contains either integers or other "special" arrays. The product sum of a "special" array is the
+   sum of its elements, where "special" arrays inside it are summed themselves and then multiplied by their level of depth.
+   The depth of a "special" array is how far nested it is. For instance, the depth of [J is 1 ;the depth of the inner array in [ [ ] ] is 2 ;
+   the depth of the innermost array in [ C [ ] ] ] is 3 .
+   Therefore, the product sum of [x, y] is x + y ; the product sum of [x, [y, z]] is x + 2 * (y + z) ;
+   the product sum of  [x, [y, is x + 2 * (y + 3z)
+
+    Sample Input:  array = [5, 2, [7, -1], 3, [6, [-13, 8], 4]]
+    Sample Output: 12 // 5 + 2 + 2 * (7 - 1) + 3 + 2 * (6 + 3 * (-13 + 8) + 4)
+
+    O(n) time | O(d) space - where n is the total number of elements in the array, including sub-elements, and d is the greatest depth of "special"
+ */
+
+namespace Recursion.Easy;
+
+public static class ProductSum
+{
+    public static int GetProductSum(List<object> array)
+    {
+        return GetSum(array, 1);
+    }
+
+    private static int GetSum(List<object> array, int multiplier)
+    {
+        var sum = 0;
+        foreach (var item in array)
+        {
+            if (item is IList<object>)
+            {
+                sum += GetSum((List<object>)item, multiplier + 1);
+            }
+            else
+            {
+                sum += (int)item;
+            }
+        }
+
+        return sum * multiplier;
+    }
+}
