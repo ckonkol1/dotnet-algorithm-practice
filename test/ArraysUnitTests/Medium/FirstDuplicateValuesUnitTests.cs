@@ -21,23 +21,21 @@ public class FirstDuplicateValuesUnitTests
         Assert.Equal(expectedResult, result);
     }
 
-    public static IEnumerable<object[]> GetFirstDuplicateValuesData
+    public static TheoryData<int[], int> GetFirstDuplicateValuesData
     {
         get
         {
-            var data = new List<object[]>
-            {
-                new object[] { new[] { 2, 1, 5, 2, 3, 3, 4 }, 2 },
-                new object[] { new[] { 2, 1, 5, 3, 3, 2, 4 }, 3 },
-                new object[] { new[] { 3, 1, 3, 1, 1, 4, 4 }, 3 },
-                new object[] { new[] { 1, 1, 2, 3, 3, 2, 2 }, 1 },
-                new object[] { new int[] { }, -1 },
-                new object[] { new[] { 1 }, -1 },
-                new object[] { new[] { 1, 1 }, 1 },
-                new object[] { new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10 }, 10 },
-                new object[] { new[] { 2, 1, 1 }, 1 },
-                new object[] { new[] { 2, 2, 2, 2, 2, 2, 2, 2, 2 }, 2 },
-            };
+            var data = new TheoryData<int[], int>();
+            data.Add([2, 1, 5, 2, 3, 3, 4], 2);
+            data.Add([2, 1, 5, 3, 3, 2, 4], 3);
+            data.Add([3, 1, 3, 1, 1, 4, 4], 3);
+            data.Add([1, 1, 2, 3, 3, 2, 2], 1);
+            data.Add([], -1);
+            data.Add([1], -1);
+            data.Add([1, 1], 1);
+            data.Add([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10], 10);
+            data.Add([2, 1, 1], 1);
+            data.Add([2, 2, 2, 2, 2, 2, 2, 2, 2], 2);
             return data;
         }
     }

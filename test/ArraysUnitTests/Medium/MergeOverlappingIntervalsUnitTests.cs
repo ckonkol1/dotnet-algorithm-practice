@@ -19,28 +19,28 @@ public class MergeOverlappingIntervalsUnitTests
             var data = new TheoryData<int[][], int[][]>();
             {
                 data.Add(
-                    new[] { new[] { 1, 3 }, new[] { 2, 6 }, new[] { 8, 10 }, new[] { 15, 18 } },
-                    new[] { new[] { 1, 6 }, new[] { 8, 10 }, new[] { 15, 18 } }
+                    [[1, 3], [2, 6], [8, 10], [15, 18]],
+                    [[1, 6], [8, 10], [15, 18]]
                 );
                 data.Add(
-                    new[] { new[] { 1, 4 }, new[] { 4, 5 } },
-                    new[] { new[] { 1, 5 } }
+                    [[1, 4], [4, 5]],
+                    [[1, 5]]
                 );
                 data.Add(
-                    new[] { new[] { 1, 4 }, new[] { 0, 2 }, new[] { 3, 5 } },
-                    new[] { new[] { 0, 5 } }
+                    [[1, 4], [0, 2], [3, 5]],
+                    [[0, 5]]
                 );
                 data.Add(
-                    new[] { new[] { 1, 4 }, new[] { 5, 6 } },
-                    new[] { new[] { 1, 4 }, new[] { 5, 6 } }
+                    [[1, 4], [5, 6]],
+                    [[1, 4], [5, 6]]
                 );
                 data.Add(
-                    new[] { new[] { 1, 10 }, new[] { 2, 3 }, new[] { 4, 5 }, new[] { 6, 7 } },
-                    new[] { new[] { 1, 10 } }
+                    [[1, 10], [2, 3], [4, 5], [6, 7]],
+                    [[1, 10]]
                 );
                 data.Add(
-                    new[] { new[] { 1, 2 } },
-                    new[] { new[] { 1, 2 } }
+                    [[1, 2]],
+                    [[1, 2]]
                 );
             }
             return data;
