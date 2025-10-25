@@ -1,6 +1,6 @@
 ﻿using Graph.Models;
 
-namespace GraphUnitTests
+namespace GraphUnitTests.Easy
 {
     public class GraphUnitTests
     {
