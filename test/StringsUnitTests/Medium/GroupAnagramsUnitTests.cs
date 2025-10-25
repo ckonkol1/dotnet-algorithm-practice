@@ -16,46 +16,48 @@ public class GroupAnagramsUnitTests
     {
         get
         {
-            var data = new TheoryData<List<string>, List<List<string>>>();
-            data.Add(
-                ["eat", "tea", "tan", "ate", "nat", "bat"],
-                [
-                    new List<string> { "eat", "tea", "ate" },
-                    new List<string> { "tan", "nat" },
-                    new List<string> { "bat" }
-                ]
-            );
-            data.Add(
-                ["a", "b", "a"],
-                [
-                    new List<string> { "a", "a" },
-                    new List<string> { "b" }
-                ]
-            );
-            data.Add(
-                [""],
-                [new List<string> { "" }]
-            );
-            data.Add(
-                ["abc", "def", "ghi"],
-                [
-                    new List<string> { "abc" },
-                    new List<string> { "def" },
-                    new List<string> { "ghi" }
-                ]
-            );
-            data.Add(
-                [],
-                []
-            );
-            data.Add(
-                ["listen", "silent", "hello", "world"],
-                [
-                    new List<string> { "listen", "silent" },
-                    new List<string> { "hello" },
-                    new List<string> { "world" }
-                ]
-            );
+            var data = new TheoryData<List<string>, List<List<string>>>
+            {
+                {
+                    ["eat", "tea", "tan", "ate", "nat", "bat"],
+                    [
+                        ["eat", "tea", "ate"],
+                        ["tan", "nat"],
+                        ["bat"]
+                    ]
+                },
+                {
+                    ["a", "b", "a"],
+                    [
+                        ["a", "a"],
+                        ["b"]
+                    ]
+                },
+                {
+                    [""],
+                    [[""]]
+                },
+                {
+                    ["abc", "def", "ghi"],
+                    [
+                        ["abc"],
+                        ["def"],
+                        ["ghi"]
+                    ]
+                },
+                {
+                    [],
+                    []
+                },
+                {
+                    ["listen", "silent", "hello", "world"],
+                    [
+                        ["listen", "silent"],
+                        ["hello"],
+                        ["world"]
+                    ]
+                }
+            };
             return data;
         }
     }

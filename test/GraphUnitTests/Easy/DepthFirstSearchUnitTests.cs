@@ -2,17 +2,17 @@
 
 namespace GraphUnitTests.Easy
 {
-    public class GraphUnitTests
+    public class DepthFirstSearchUnitTests
     {
         [Fact]
         public void TestDepthFirstSearch()
         {
             var graph = new Node("A");
             graph.AddChild("B").AddChild("C").AddChild("D");
-            graph.children[0].AddChild("E").AddChild("F");
-            graph.children[2].AddChild("G").AddChild("H");
-            graph.children[0].children[1].AddChild("I").AddChild("J");
-            graph.children[2].children[0].AddChild("K");
+            graph.Children[0].AddChild("E").AddChild("F");
+            graph.Children[2].AddChild("G").AddChild("H");
+            graph.Children[0].Children[1].AddChild("I").AddChild("J");
+            graph.Children[2].Children[0].AddChild("K");
             var expectedResult = new List<string>() { "A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H" };
 
             var result = new List<string>();

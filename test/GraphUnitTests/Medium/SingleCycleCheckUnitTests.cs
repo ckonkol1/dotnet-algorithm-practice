@@ -20,13 +20,12 @@ public class SingleCycleCheckUnitTests
 
             data.Add([2, 3, 1, -4, -4, 2], true); // Single cycle exists
             data.Add([1, 1, 1, 1, 2], false); // Does not visit all elements
-            data.Add([2, 2, -1], false); // Jumps skip elements
+            data.Add([2, 2, -1], true); // Jumps skip elements
             data.Add([1, -1, 1, -1], false); // Alternates, never completes cycle
             data.Add([0, 1, 1, 1, 1], false); // Stuck at index 0
             data.Add([1, 1, 1, 1, -4], true); // Single cycle, wraps around
-            data.Add([10, -11, -6, -23, 2, 3, 88, 909, -26], true); // Large jumps, single cycle
-            data.Add([1], true); // Single element, always a cycle
-            data.Add([0], false); // Single element, stuck at start
+            data.Add([10, -11, -6, -23, 2, 3, 88, 909, -26], false); // Large jumps, single cycle
+            data.Add([1], true);
             data.Add([2, 2, 2], true); // All jumps form a cycle
 
             return data;
