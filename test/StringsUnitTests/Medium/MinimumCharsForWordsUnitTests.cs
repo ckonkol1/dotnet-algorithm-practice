@@ -16,17 +16,19 @@ public class MinimumCharsForWordsUnitTests
     {
         get
         {
-            var data = new TheoryData<string[], string[]>();
-            data.Add(["this", "that", "did", "deed", "them!", "a"], ["!", "a", "d", "d", "e", "e", "h", "i", "m", "s", "t", "t"]);
-            data.Add(["apple", "plea", "lap"], ["a", "e", "l", "p", "p"]);
-            data.Add(["abc", "bca", "cab"], ["a", "b", "c"]);
-            data.Add(["hello", "world"], ["d", "e", "h", "l", "l", "o", "r", "w"]);
-            data.Add(["a", "b", "c"], ["a", "b", "c"]);
-            data.Add([""], []);
-            data.Add(["test", "set", "tset"], ["e", "s", "t", "t"]);
-            data.Add(["mississippi", "sip"], ["i", "i", "m", "p", "s", "s", "s"]);
-            data.Add(["aaa", "aa", "a"], ["a", "a", "a"]);
-            data.Add(["xyz", "xy", "z"], ["x", "y", "z"]);
+            var data = new TheoryData<string[], string[]>
+            {
+                { ["this", "that", "did", "deed", "them!", "a"], ["!", "a", "d", "d", "e", "e", "h", "i", "m", "s", "t", "t"] },
+                { ["apple", "plea", "lap"], ["a", "e", "l", "p", "p"] },
+                { ["abc", "bca", "cab"], ["a", "b", "c"] },
+                { ["hello", "world"], ["d", "e", "h", "l", "l", "o", "r", "w"] },
+                { ["a", "b", "c"], ["a", "b", "c"] },
+                { [""], [] },
+                { ["test", "set", "tset"], ["e", "s", "t", "t"] },
+                { ["mississippi", "sip"], ["i", "i", "m", "p", "s", "s", "s"] },
+                { ["aaa", "aa", "a"], ["a", "a", "a"] },
+                { ["xyz", "xy", "z"], ["x", "y", "z"] }
+            };
             return data;
         }
     }
